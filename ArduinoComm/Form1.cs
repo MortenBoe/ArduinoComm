@@ -174,7 +174,7 @@ namespace ArduinoComm
                 progressBar1.Value = Convert.ToInt32(TrekkUtData(sData, "D1"));
 
                 // skriver ut rådata
-                txtData.Text += sData;
+                txtData.Text += sData + '\n';
             }
             catch (Exception ex)
             {
