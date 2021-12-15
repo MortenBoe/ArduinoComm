@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArduino));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnOn = new System.Windows.Forms.Button();
             this.btnOff = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -54,14 +53,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtData = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnOn
             // 
-            this.btnOn.Location = new System.Drawing.Point(22, 59);
+            this.btnOn.Location = new System.Drawing.Point(21, 71);
             this.btnOn.Name = "btnOn";
             this.btnOn.Size = new System.Drawing.Size(123, 23);
             this.btnOn.TabIndex = 0;
@@ -71,7 +72,7 @@
             // 
             // btnOff
             // 
-            this.btnOff.Location = new System.Drawing.Point(22, 88);
+            this.btnOff.Location = new System.Drawing.Point(21, 102);
             this.btnOff.Name = "btnOff";
             this.btnOff.Size = new System.Drawing.Size(123, 23);
             this.btnOff.TabIndex = 1;
@@ -89,7 +90,7 @@
             // cmbPort
             // 
             this.cmbPort.FormattingEnabled = true;
-            this.cmbPort.Location = new System.Drawing.Point(46, 3);
+            this.cmbPort.Location = new System.Drawing.Point(45, 4);
             this.cmbPort.Name = "cmbPort";
             this.cmbPort.Size = new System.Drawing.Size(95, 24);
             this.cmbPort.TabIndex = 3;
@@ -103,7 +104,7 @@
             // lblPort
             // 
             this.lblPort.AutoSize = true;
-            this.lblPort.Location = new System.Drawing.Point(562, 7);
+            this.lblPort.Location = new System.Drawing.Point(557, 7);
             this.lblPort.Name = "lblPort";
             this.lblPort.Size = new System.Drawing.Size(31, 16);
             this.lblPort.TabIndex = 4;
@@ -136,7 +137,7 @@
             // 
             // btnSerOpen
             // 
-            this.btnSerOpen.Location = new System.Drawing.Point(333, 2);
+            this.btnSerOpen.Location = new System.Drawing.Point(337, 4);
             this.btnSerOpen.Name = "btnSerOpen";
             this.btnSerOpen.Size = new System.Drawing.Size(90, 23);
             this.btnSerOpen.TabIndex = 9;
@@ -146,7 +147,7 @@
             // 
             // btnSerClose
             // 
-            this.btnSerClose.Location = new System.Drawing.Point(433, 2);
+            this.btnSerClose.Location = new System.Drawing.Point(433, 4);
             this.btnSerClose.Name = "btnSerClose";
             this.btnSerClose.Size = new System.Drawing.Size(90, 23);
             this.btnSerClose.TabIndex = 10;
@@ -157,7 +158,7 @@
             // lblBaudrate
             // 
             this.lblBaudrate.AutoSize = true;
-            this.lblBaudrate.Location = new System.Drawing.Point(147, 6);
+            this.lblBaudrate.Location = new System.Drawing.Point(147, 7);
             this.lblBaudrate.Name = "lblBaudrate";
             this.lblBaudrate.Size = new System.Drawing.Size(62, 16);
             this.lblBaudrate.TabIndex = 11;
@@ -171,7 +172,7 @@
             "38400",
             "74880",
             "112500"});
-            this.cmbBaudrate.Location = new System.Drawing.Point(215, 2);
+            this.cmbBaudrate.Location = new System.Drawing.Point(215, 4);
             this.cmbBaudrate.Name = "cmbBaudrate";
             this.cmbBaudrate.Size = new System.Drawing.Size(95, 24);
             this.cmbBaudrate.TabIndex = 12;
@@ -179,7 +180,7 @@
             // 
             // btnBlink1
             // 
-            this.btnBlink1.Location = new System.Drawing.Point(151, 59);
+            this.btnBlink1.Location = new System.Drawing.Point(151, 71);
             this.btnBlink1.Name = "btnBlink1";
             this.btnBlink1.Size = new System.Drawing.Size(163, 23);
             this.btnBlink1.TabIndex = 13;
@@ -189,26 +190,26 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea7.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea7);
+            legend7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            legend7.IsTextAutoFit = false;
+            legend7.Name = "Legend1";
+            this.chart1.Legends.Add(legend7);
             this.chart1.Location = new System.Drawing.Point(12, 188);
             this.chart1.Name = "chart1";
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series3.Legend = "Legend1";
-            series3.Name = "D1";
-            series4.BorderWidth = 2;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series4.Legend = "Legend1";
-            series4.Name = "D2";
-            this.chart1.Series.Add(series3);
-            this.chart1.Series.Add(series4);
+            series13.BorderWidth = 2;
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series13.Legend = "Legend1";
+            series13.Name = "D1";
+            series14.BorderWidth = 2;
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series14.Legend = "Legend1";
+            series14.Name = "D2";
+            this.chart1.Series.Add(series13);
+            this.chart1.Series.Add(series14);
             this.chart1.Size = new System.Drawing.Size(842, 247);
             this.chart1.TabIndex = 14;
             this.chart1.Text = "chart1";
@@ -234,13 +235,13 @@
             this.panel1.Controls.Add(this.lblBaudrate);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 35);
+            this.panel1.Size = new System.Drawing.Size(873, 35);
             this.panel1.TabIndex = 16;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 9);
+            this.label3.Location = new System.Drawing.Point(5, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 16);
             this.label3.TabIndex = 13;
@@ -249,7 +250,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 134);
+            this.label4.Location = new System.Drawing.Point(9, 141);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 16);
             this.label4.TabIndex = 17;
@@ -257,7 +258,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(151, 88);
+            this.button1.Location = new System.Drawing.Point(150, 102);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 23);
             this.button1.TabIndex = 18;
@@ -265,15 +266,33 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // richTextBox1
+            // txtData
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(363, 43);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(505, 136);
-            this.richTextBox1.TabIndex = 19;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.txtData.Location = new System.Drawing.Point(379, 71);
+            this.txtData.Multiline = true;
+            this.txtData.Name = "txtData";
+            this.txtData.ReadOnly = true;
+            this.txtData.Size = new System.Drawing.Size(475, 108);
+            this.txtData.TabIndex = 19;
+            this.txtData.WordWrap = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(376, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(122, 16);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Rådata fra Arduino:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(128, 16);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Styre arduino fra PC:";
             // 
             // frmArduino
             // 
@@ -281,7 +300,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(880, 475);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtData);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
@@ -294,9 +315,8 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnOff);
             this.Controls.Add(this.btnOn);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmArduino";
-            this.Text = "Arduino <-> PC   Kommunikasjonstest";
+            this.Text = "Arduino <-> PC   Kommunikasjonstest  (Egen Arduino-kode)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmArduino_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmArduino_FormClosed);
             this.Load += new System.EventHandler(this.frmArduino_Load);
@@ -330,7 +350,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.TextBox txtData;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -64,6 +64,7 @@ namespace ArduinoComm
 
         private void frmArduino_Load(object sender, EventArgs e)
         {
+            cmbPort.Items.Clear();  
 
             try
             {
@@ -151,6 +152,8 @@ namespace ArduinoComm
         {
             try
             {
+
+
                 // Trekker ut innholdet ; her D1 og D2 som kommer ifra linjen skrevet Arduino
                 textBox1.Text = TrekkUtData(sData, "D1");
                 textBox2.Text = TrekkUtData(sData, "D2");
@@ -170,7 +173,8 @@ namespace ArduinoComm
                 // (Maximum- og minimum-verdier er forhåndsdefinert i progressbar1.)
                 progressBar1.Value = Convert.ToInt32(TrekkUtData(sData, "D1"));
 
-
+                // skriver ut rådata
+                txtData.Text += sData;
             }
             catch (Exception ex)
             {
@@ -292,7 +296,7 @@ namespace ArduinoComm
 
 /**
 // ARDUINO-testkode
-// Copy-and-Paste 
+// Copy-and-Paste to Arduino IDE and run
 
 #include <string.h>
 
