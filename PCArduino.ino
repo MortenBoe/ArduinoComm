@@ -66,7 +66,7 @@ void loop()
     }
 
 
-    // PERIODE 1 - innhenting og overføring av data til pc
+    // PERIODE 1 - innhenting og overføring av data til pc 
     if (millis() >= TID1 + PERIODE1)
     {
         TID1 += PERIODE1;
