@@ -238,7 +238,7 @@ namespace ArduinoComm
         private void btnBlink1_Click(object sender, EventArgs e)
         {
             try {
-                // Sender ut kommandoen at LED13 skal blinke (her:333ms mellom hver blink)
+                // Sender ut kommandoen at LED13 skal blinke (her:500ms mellom hver blink)
                 ArduinoPort.Write("B13=500");
             }
             catch (Exception ex) {
