@@ -72,9 +72,9 @@ namespace ArduinoComm
                 {
                     cmbPort.Items.AddRange(SerialPort.GetPortNames());
                     cmbPort.SelectedIndex = 0;
-                    ArduinoPort.BaudRate = 9600;
+                    ArduinoPort.BaudRate = 115200;
                     ArduinoPort.PortName = cmbPort.Text;
-                    cmbBaudrate.Text = "9600";
+                    cmbBaudrate.Text = "115200";
                     lblPort.Text = "Arduino på port: "+ ArduinoPort.PortName;
                     btnSerOpen.Enabled = true;
                     btnSerClose.Enabled = false;
@@ -312,7 +312,7 @@ unsigned long TID2 = 0;
 
 void setup()
 {
-    Serial.begin(9600);
+    Serial.begin(115200);
     // Standard overføringshastighet på serieport-kommunikasjon
 
     pinMode(13, OUTPUT);
